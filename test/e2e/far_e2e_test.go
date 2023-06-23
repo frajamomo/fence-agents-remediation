@@ -137,7 +137,7 @@ func buildSharedParameters(clusterPlatform *configv1.Infrastructure, action stri
 
 		// BareMetal
 		//TODO: secret BM should be based on node name - > oc get bmh -n openshift-machine-api BM_NAME -o jsonpath='{.spec.bmc.credentialsName}'
-		secretBMHExample = "ostest-master-0-bmc-secret"
+		secretBMHExample = "openshift-master-0-0-bmc-secret"
 		secretKeyBM      = "username"
 		secretValBM      = "password"
 	)
@@ -174,7 +174,7 @@ func buildSharedParameters(clusterPlatform *configv1.Infrastructure, action stri
 		testShareParam = map[v1alpha1.ParameterName]string{
 			"--username": username,
 			"--password": password,
-			"--ip":       "192.168.111.1",
+			"--ip":       "192.168.123.1",
 			"--action":   action,
 			"--lanplus":  "",
 		}

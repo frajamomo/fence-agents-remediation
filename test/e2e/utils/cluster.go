@@ -87,12 +87,12 @@ func GetBMHNodeInfoList(machineClient *machineclient.MachineV1beta1Client) (map[
 	//TODO: seacrch for BM and fetch ports
 
 	nodeList := map[v1alpha1.NodeName]string{
-		"master-0": "6230",
-		"master-1": "6231",
-		"master-2": "6232",
-		"worker-0": "6233",
-		"worker-1": "6234",
-		"worker-2": "6235",
+		"master-0-0": "6230",
+		"master-1-0": "6231",
+		"master-2-0": "6232",
+		"worker-0-0": "6233",
+		"worker-1-0": "6234",
+		"worker-2-0": "6235",
 	}
 	return nodeList, nil
 }
