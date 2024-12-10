@@ -1,4 +1,4 @@
-FROM golang:1.20-bullseye
+FROM golang:1.23.4-bullseye
 
 # Copy the repository files
 COPY . /tmp/fence-agents-remediation-qe
@@ -24,7 +24,7 @@ RUN curl -LO https://github.com/kudobuilder/kuttl/releases/download/v0.15.0/kube
     && mv kubectl-kuttl_0.15.0_linux_x86_64 /usr/local/bin/kuttl
 
 # Install kubectl and oc
-RUN curl -LO https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/latest/openshift-client-linux.tar.gz \
+RUN curl -LO https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/4.15.0/openshift-client-linux.tar.gz \
     && tar -xzf openshift-client-linux.tar.gz \
     && chmod +x oc kubectl \
     && mv oc kubectl /usr/local/bin/
